@@ -3,40 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <title>2-imported-func</title>
-    <link
-      rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css"
-    />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
   </head>
   <body>
-    <h1>Importing a function</h1>
-    <pre><code class="wat">
-;; imported_func.wat
-
-(module
-  (func $i (import "imports" "imported_func") (param i32))
-  (func (export "exported_func")
-    i32.const 42
-    call $i))
-    </code></pre>
-    <pre><code class="bash">
-$ wat2wasm imported_func.wat -o imported_func.wasm
-    </code></pre>
-    <pre><code class="js">
-// Prepare imports for WASM module
-const importObj = {
-  imports: { imported_func: arg => console.log(arg) }
-};
-
-WebAssembly
-  .instantiateStreaming(fetch("/2/imported_func.wasm"), importObj)
-  .then(obj => {
-    // Call exported function
-    obj.instance.exports.exported_func();
-  });
-    </code></pre>
     <script type="module">
+      // Prepare imports for WASM module
       const importObj = {
         imports: { imported_func: arg => console.log(arg) }
       };
@@ -44,11 +14,9 @@ WebAssembly
         fetch("/2/imported_func.wasm"),
         importObj
       ).then(obj => {
+        // Call exported function
         obj.instance.exports.exported_func();
       });
-    </script>
-    <script>
-      hljs.initHighlightingOnLoad();
     </script>
   </body>
 </html>

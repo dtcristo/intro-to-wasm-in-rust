@@ -3,36 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <title>1-simple</title>
-    <link
-      rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css"
-    />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
   </head>
   <body>
-    <h1>Simple WASM module</h1>
-    <pre><code class="wat">
-;; simple.wat
-
-(module
-  (func (export "add") (param i32 i32) (result i32)
-    local.get 0
-    local.get 1
-    i32.add))
-    </code></pre>
-    <pre><code class="bash">
-$ wat2wasm simple.wat -o simple.wasm
-    </code></pre>
-    <pre><code class="js">
-// Fetch wasm binary and perform streaming instantiation
-WebAssembly
-  .instantiateStreaming(fetch("/1/simple.wasm"), {})
-  .then(obj => {
-    // Call exported function
-    const result = obj.instance.exports.add(1, 1);
-    console.log("result =", result);
-  });
-    </code></pre>
     <script type="module">
       // Fetch wasm binary and perform streaming instantiation
       WebAssembly.instantiateStreaming(fetch("/1/simple.wasm"), {}).then(
@@ -42,9 +14,6 @@ WebAssembly
           console.log("result =", result);
         }
       );
-    </script>
-    <script>
-      hljs.initHighlightingOnLoad();
     </script>
   </body>
 </html>

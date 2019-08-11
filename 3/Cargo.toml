@@ -1,0 +1,10 @@
+[package]
+name = "add-rust"
+version = "0.1.0"
+authors = ["David Cristofaro <david@dtcristo.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]

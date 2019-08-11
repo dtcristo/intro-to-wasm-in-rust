@@ -7,18 +7,48 @@
   </head>
   <body>
     <textarea id="source">
-
-class: center, middle
+name: inverse
+layout: true
+class: center, middle, inverse
+---
+template: inverse
 
 # Introduction to WebAssembly in Rust
-
 ---
+layout: false
 
 # Agenda
 
-1. Introduction
+1. What is WebAssembly?
 2. Deep-dive
-3. ...
+3. Demo
+---
+# What is WebAssembly?
+
+WebAssembly (or WASM) is a set of standards around:
+- A stack-based **runtime environment** in all modern browsers.
+- Text and binary **executable format**.
+
+Two formats that represent the same data.
+- `.wat` - Human readable text format.
+```
+(module
+    (func (export "addTwo") (param i32 i32) (result i32)
+        local.get 0
+        local.get 1
+        i32.add))
+```
+
+- `.wasm` - More compact binary representation.
+```wasm
+0000000 00 61 73 6d 01 00 00 00 01 07 01 60 02 7f 7f 01
+0000010 7f 03 02 01 00 07 0a 01 06 61 64 64 54 77 6f 00
+0000020 00 0a 09 01 07 00 20 00 20 01 6a 0b
+000002c
+```
+
+- Linear memory model
+
 
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
