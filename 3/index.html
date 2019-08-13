@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <title>3-add-rust</title>
+    <base href="/3/" />
   </head>
   <body>
     <script type="module">
       WebAssembly.instantiateStreaming(
-        fetch("/3/target/wasm32-unknown-unknown/release/add_rust.wasm"),
+        fetch("target/wasm32-unknown-unknown/release/add_rust.wasm"),
         {}
       ).then(obj => {
         const result = obj.instance.exports.add_rust(1, 1);
-        console.log("result =", result);
+        console.log(result);
       });
     </script>
   </body>
