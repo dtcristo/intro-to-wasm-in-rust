@@ -1,7 +1,7 @@
 async function run() {
   // Prepare imports for WASM module
   const importObj = {
-    imports: { log: arg => console.log(arg) }
+    imports: { log: console.log }
   };
 
   // Provide imports for streaming instantiation
