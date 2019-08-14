@@ -4,20 +4,9 @@
     <meta charset="utf-8" />
     <title>2-imported-func</title>
     <base href="/2-imported-func/" />
+    <script type="module" src="main.js"></script>
   </head>
   <body>
     <p>Check console.</p>
-    <script type="module">
-      // Prepare imports for WASM module
-      const importObj = {
-        imports: { imported_func: arg => console.log(arg) }
-      };
-      WebAssembly.instantiateStreaming(
-        fetch("imported_func.wasm"),
-        importObj
-      ).then(obj => {
-        obj.instance.exports.exported_func();
-      });
-    </script>
   </body>
 </html>
