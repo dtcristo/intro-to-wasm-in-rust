@@ -1,5 +1,7 @@
 # Introduction to WebAssembly in Rust
 
+Examples shown in my talk at Rust Melbourne meetup 14/08/2019.
+
 ## Installation
 
 Install the [WebAssembly Binary Toolkit](https://github.com/WebAssembly/wabt).
