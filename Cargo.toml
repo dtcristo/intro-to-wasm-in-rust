@@ -1,6 +1,6 @@
 [workspace]
 members = [
-  "3", "4", "5"
+  "3-add-rust", "4-hello-world", "5-dom"
 ]
 
 [profile.release]
