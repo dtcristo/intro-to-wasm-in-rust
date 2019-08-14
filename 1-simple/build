@@ -1,4 +1,0 @@
-#!/bin/sh
-set -e
-
-wat2wasm simple.wat -o simple.wasm
