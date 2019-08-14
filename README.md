@@ -30,6 +30,8 @@ npm install -g es-dev-server
 es-dev-server
 ```
 
+View examples in browser at [http://localhost:8000/](http://localhost:8000/).
+
 ## License
 
 Licensed under either of
