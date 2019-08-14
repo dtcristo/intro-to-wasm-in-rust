@@ -6,6 +6,7 @@
     <base href="/1-simple/" />
   </head>
   <body>
+    <p>Check console.</p>
     <script type="module">
       // Fetch wasm binary and perform streaming instantiation
       WebAssembly.instantiateStreaming(fetch("simple.wasm"), {}).then(obj => {
