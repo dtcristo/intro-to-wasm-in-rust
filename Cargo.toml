@@ -1,6 +1,6 @@
 [workspace]
 members = [
-  "3-add-rust", "4-hello-world", "5-dom"
+  "3-add-rust", "4-hello-world", "5-dom", "6-memory"
 ]
 
 [profile.release]
