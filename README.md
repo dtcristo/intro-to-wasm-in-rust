@@ -21,7 +21,7 @@ rustup target add wasm32-unknown-unknown
 Build all examples.
 
 ```sh
-./build
+./build.sh
 ```
 
 Start a webserver like [es-dev-server](https://github.com/open-wc/open-wc/tree/master/packages/es-dev-server)

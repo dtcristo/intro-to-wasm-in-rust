@@ -1,9 +1,0 @@
-#!/bin/sh
-set -e
-
-cd 1-add && ./build && cd ..
-cd 2-add-and-log && ./build && cd ..
-cd 3-add-rust && ./build && cd ..
-cd 4-hello-world && ./build && cd ..
-cd 5-memory && ./build && cd ..
-cd 6-dom && ./build && cd ..
