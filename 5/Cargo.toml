@@ -29,12 +29,6 @@ features = [
   'HtmlElement',
   'Node',
   'Window',
+  'HtmlButtonElement',
+  'Event'
 ]
-
-[profile.release]
-# Tell `rustc` to optimize for small code size.
-opt-level = "s"
-
-
-# https://rustwasm.github.io/wasm-bindgen/api/js_sys/
-# https://rustwasm.github.io/wasm-bindgen/api/web_sys/
