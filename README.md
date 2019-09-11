@@ -1,6 +1,6 @@
 # Introduction to WebAssembly in Rust
 
-Examples shown in my talk at Rust Melbourne meetup 14/08/2019.
+Examples shown in my talk at Rust Melbourne meetup 14/08/2019. The recording is available on [YouTube](https://www.youtube.com/watch?v=WONGc1zUxtc).
 
 ## Installation
 
