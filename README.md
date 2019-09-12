@@ -18,6 +18,12 @@ Add `wasm32-unknown-unknown` target.
 rustup target add wasm32-unknown-unknown
 ```
 
+Install [wasm-pack](https://github.com/rustwasm/wasm-pack).
+
+```sh
+cargo install wasm-pack
+```
+
 Build all examples.
 
 ```sh
